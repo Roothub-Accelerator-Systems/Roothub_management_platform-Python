@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#importing the os module so that I can make use of os.path.join
+import os
+
+MEDIA_URL = "/media/"
+MEIDA_ROOT = os.path.join(BASE_DIR,"media")
+
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR,"static")
 
 # Application definition
 
@@ -37,6 +45,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "roothub_cms_app",
 ]
 
 MIDDLEWARE = [
